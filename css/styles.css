@@ -94,7 +94,7 @@ p {
 .header-container {
   display: flex;
   align-items: center;
-  
+
   justify-content: space-between;
 }
 .header-nav {
@@ -269,6 +269,66 @@ p {
   letter-spacing: 0.02em;
   transition: color, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.title-icon {
+  font-size: 16px;
+  color: var(--color-text-secendary);
+  margin-bottom: 20px;
+  text-align: start;
+}
+.footer-team-icon {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-conteiner {
+  margin-top: 12px;
+}
+.newl-conteiner {
+  padding-left: 7px;
+  margin-top: 12px;
+}
+.input-signup {
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: #2f303a;
+  padding: 15px;
+  margin-right: 12px;
+  outline: 0;
+}
+.input-signup:hover,
+.input-signup:active {
+  border: 1px solid #2196f3;
+}
+.button-signup {
+  width: 200px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  gap: 24px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 42px;
+  transition: border-color, 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-signup:hover {
+  stroke: var(--color-text-hover);
+}
+.icon-signup {
+  fill: #ffffff;
+}
 /* -------------OKONO MODALNE------------ */
 .backdrop {
   position: fixed;
@@ -314,7 +374,109 @@ p {
 .close-icon {
   background-color: var(--background-fill-color-first);
 }
-
+.modal-title {
+  width: 448px;
+  height: 23px;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-bottom: 0;
+}
+.modal-label {
+  width: 448px;
+  height: 40px;
+  line-height: 1.17;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border, fill;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+.modal-imput {
+  border: none;
+  padding-left: 15px;
+  outline: none;
+  width: 100%;
+  color: var(--color-text-secendary);
+}
+.label-text {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.modal-icon {
+  margin-left: 15px;
+}
+.modal-label:hover {
+  border: 1px solid rgba(33, 150, 243, 1);
+  fill: rgba(33, 150, 243, 1);
+}
+.modal-label--size {
+  width: 448px;
+  height: 120px;
+}
+textarea {
+  width: 416px;
+  height: 96px;
+  margin: 12px 16px;
+  font-size: 12px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+.label-checkbox {
+  display: flex;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-left: 14px;
+  gap: 7px;
+  margin-top: 20px;
+  align-items: center;
+}
+.label-checkbox > a {
+  color: #2196f3;
+  text-decoration: underline;
+}
+.checkbox-input {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.checkbox-icon {
+  border-radius: 2px;
+  width: 16px;
+  height: 15px;
+  fill: #ffffff;
+  border: 0.2px solid rgba(33, 33, 33, 1);
+}
+.checkbox-icon::after {
+  content: '';
+  background: #ffffff;
+  border: 0.2px solid #ffffff;
+}
+.checkbox-input:checked + .checkbox-icon {
+  border-color: #2196f3;
+  background-color: #2196f3;
+}
+.checkbox-input:checked + .checkbox-icon::after {
+  fill: #ffffff;
+  border: 0.2px solid rgba(33, 33, 33, 1);
+}
+.button-send {
+  background: var(--color-text-hover);
+  color: var(--color-text-secendary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 76px;
+  margin-top: 30px;
+  margin-left: 164px;
+}
 /* --------ZAKŁADKA PORFOLIO--------- */
 
 .button-container {
@@ -330,7 +492,7 @@ p {
   line-height: 1.62;
   padding: 6px 22px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background, color, box-shadow
+  transition-property: background, color, box-shadow;
 }
 .button-secendary:hover,
 .button-secendary:focus {
@@ -483,18 +645,4 @@ p {
   justify-content: center;
   align-items: center;
   transition: background-color, fill, border-radius, 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.title-icon {
-  font-size: 16px;
-  color: var(--color-text-secendary);
-  margin-bottom: 20px;
-  text-align: start;
-}
-.footer-team-icon {
-  display: flex;
-  gap: 10px;
-}
-
-.icon-conteiner {
-  margin-top: 12px;
 }
