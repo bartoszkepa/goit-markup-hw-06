@@ -394,6 +394,7 @@ p {
 }
 .modal-imput {
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
   outline: none;
   width: 100%;
   color: #212121;
@@ -429,6 +430,7 @@ textarea {
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   color: rgba(117, 117, 117, 0.5);
+  border-radius: 4px;
 }
 .label-checkbox {
   display: flex;
@@ -474,8 +476,12 @@ textarea {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 10px 76px;
-  margin-top: 30px;
-  margin-left: 164px;
+  margin: 30px 144px 40px;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.06em;
 }
 /* --------ZAKŁADKA PORFOLIO--------- */
 
